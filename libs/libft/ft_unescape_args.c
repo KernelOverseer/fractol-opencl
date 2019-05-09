@@ -6,7 +6,7 @@
 /*   By: abiri <kerneloverseer@pm.me>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 20:37:10 by abiri             #+#    #+#             */
-/*   Updated: 2019/03/25 20:43:28 by abiri            ###   ########.fr       */
+/*   Updated: 2019/05/09 17:22:02 by abiri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strunescape(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == '\\' && str[i+1] != '\\')
+		if (str[i] == '\\' && str[i + 1] != '\\')
 			counter--;
 		counter++;
 		i++;

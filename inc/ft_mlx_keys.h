@@ -6,12 +6,12 @@
 /*   By: abiri <kerneloverseer@pm.me>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 16:59:58 by abiri             #+#    #+#             */
-/*   Updated: 2019/05/08 16:19:11 by abiri            ###   ########.fr       */
+/*   Updated: 2019/05/09 17:20:24 by abiri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MLX_KEYS
-# define FT_MLX_KEYS
+#ifndef FT_MLX_KEYS_H
+# define FT_MLX_KEYS_H
 
 /*
 **	Defining Event ID's
