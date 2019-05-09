@@ -31,11 +31,12 @@ __kernel void fractal(	long double a_min,
 	percent = (long double)y/(long double)height;
 	b = percent*((long double)(b_max-b_min))+b_min;
 	percent = (long double)mouseX/(long double)width;
-	ca = percent*((long double)(4)) - 2;
+	ca = percent * (4) - 2;
 	percent = (long double)mouseY/(long double)height;
-	cb = percent*((long double)(4)) - 2;
+	cb = percent * (4) - 2;
 
 	int n = 0;
+
 	while (n < max_iter)
 	{
 		aa = a*a - b*b;
@@ -47,9 +48,7 @@ __kernel void fractal(	long double a_min,
 		n++;
 	}
 	if (n == max_iter)
-	{
 		res[id] = 0;
-		return;
-	}
-	res[id] = n;
+	else
+		res[id] = n;
 }

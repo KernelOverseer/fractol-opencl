@@ -6,13 +6,13 @@
 /*   By: abiri <kerneloverseer@pm.me>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 22:06:17 by abiri             #+#    #+#             */
-/*   Updated: 2019/05/09 18:15:25 by abiri            ###   ########.fr       */
+/*   Updated: 2019/05/09 18:46:54 by abiri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-static void	ft_loadargs(t_env *env, t_opencl *cl, cl_mem device_result)
+static	void	ft_loadargs(t_env *env, t_opencl *cl, cl_mem device_result)
 {
 	clSetKernelArg(cl->kernel, 0, sizeof(env->a_min), &(env->a_min));
 	clSetKernelArg(cl->kernel, 1, sizeof(env->a_max), &(env->a_max));
@@ -23,16 +23,14 @@ static void	ft_loadargs(t_env *env, t_opencl *cl, cl_mem device_result)
 			&(env->image->width));
 	clSetKernelArg(cl->kernel, 6, sizeof(env->image->height),
 			&(env->image->height));
-	clSetKernelArg(cl->kernel, 7, sizeof(env->mousex), &(env->mousex));
-	clSetKernelArg(cl->kernel, 8, sizeof(env->mousey), &(env->mousey));
-	clSetKernelArg(cl->kernel, 9, sizeof(cl_mem), &(device_result));
+	clSetKernelArg(cl->kernel, 7, sizeof(cl_mem), &(device_result));
 }
 
-static void	ft_drawpixels(double *vals, t_env *env)
+static	void	ft_drawpixels(double *vals, t_env *env)
 {
 	size_t	i;
 	size_t	j;
-	double	n;
+	int		n;
 	int		col;
 
 	i = 0;
@@ -53,7 +51,7 @@ static void	ft_drawpixels(double *vals, t_env *env)
 	}
 }
 
-void		ft_gpu_mandeldrop(t_env *env)
+void			ft_gpu_mandeldrop(t_env *env)
 {
 	double		*vals;
 	size_t		globalsize;
