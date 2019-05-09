@@ -6,7 +6,7 @@
 /*   By: abiri <kerneloverseer@pm.me>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/05 10:46:47 by abiri             #+#    #+#             */
-/*   Updated: 2019/05/09 17:24:28 by abiri            ###   ########.fr       */
+/*   Updated: 2019/05/09 18:18:50 by abiri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@
 # define BURNINGSHIP 2
 # define CELTICMANDELBAR 3
 # define BURNINGSHIPFIFTH 4
+# define CELTICMANDELBROT 5
+# define MANDELDROP 6
 
 /*
 **	Defining structs and typedefs
@@ -121,8 +123,10 @@ int						get_color(int iter, t_env *env);
 
 void					ft_gpu_julia(t_env *env);
 void					ft_gpu_mandelbrot(t_env *env);
+void					ft_gpu_mandeldrop(t_env *env);
 void					ft_gpu_burningship(t_env *env);
 void					ft_gpu_celticmandelbar(t_env *env);
+void					ft_gpu_celticmandelbrot(t_env *env);
 void					ft_gpu_burningshipfifth(t_env *env);
 
 #endif

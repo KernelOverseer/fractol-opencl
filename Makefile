@@ -6,7 +6,7 @@
 #    By: abiri <kerneloverseer@protonmail>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/15 20:38:11 by abiri             #+#    #+#              #
-#    Updated: 2019/05/09 17:28:19 by abiri            ###   ########.fr        #
+#    Updated: 2019/05/09 18:36:53 by abiri            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,8 @@ SRC = src/main.c\
 	  src/fractals/ft_gpu_burningship.c\
 	  src/fractals/ft_gpu_burningshipfifth.c\
 	  src/fractals/ft_gpu_celticmandelbar.c\
+	  src/fractals/ft_gpu_celticmandelbrot.c\
+	  src/fractals/ft_gpu_mandeldrop.c\
 	  src/opencltools.c
 
 FLAGS = -Wall -Werror -Wextra -framework OpenGL -framework AppKit

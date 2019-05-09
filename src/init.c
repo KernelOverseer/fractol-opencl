@@ -6,7 +6,7 @@
 /*   By: abiri <kerneloverseer@pm.me>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 17:23:39 by abiri             #+#    #+#             */
-/*   Updated: 2019/05/09 17:01:28 by abiri            ###   ########.fr       */
+/*   Updated: 2019/05/09 18:18:37 by abiri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void		ft_load_events(t_env *env, unsigned char fractalid)
 	mlx_hook(env->window, EVENT_KEY_PRESS, 0, &keypress_hook, env);
 	mlx_hook(env->window, EVENT_CLOSE, 0, &window_close, NULL);
 	mlx_hook(env->window, EVENT_MOUSE_PRESS, 0, &mouse_zoom, env);
-	if (fractalid == JULIA)
+	if (fractalid == JULIA || fractalid == MANDELDROP)
 		mlx_hook(env->window, EVENT_MOUSE_MOVE, 0, &mouse_move, env);
 }
 
@@ -49,8 +49,12 @@ char		*ft_get_programfile(unsigned char fractalid)
 		return ("./src/opencl/burningship.cl");
 	if (fractalid == CELTICMANDELBAR)
 		return ("./src/opencl/celticmandelbar.cl");
+	if (fractalid == CELTICMANDELBROT)
+		return ("./src/opencl/celticmandelbrot.cl");
 	if (fractalid == BURNINGSHIPFIFTH)
 		return ("./src/opencl/burningshipfifth.cl");
+	if (fractalid == MANDELDROP)
+		return ("./src/opencl/mandeldrop.cl");
 	return (NULL);
 }
 
@@ -64,8 +68,12 @@ t_fractfunc	*ft_load_function(unsigned char fractalid)
 		return (&ft_gpu_burningship);
 	if (fractalid == CELTICMANDELBAR)
 		return (&ft_gpu_celticmandelbar);
+	if (fractalid == CELTICMANDELBROT)
+		return (&ft_gpu_celticmandelbrot);
 	if (fractalid == BURNINGSHIPFIFTH)
 		return (&ft_gpu_burningshipfifth);
+	if (fractalid == MANDELDROP)
+		return (&ft_gpu_mandeldrop);
 	return (NULL);
 }
 

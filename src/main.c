@@ -6,7 +6,7 @@
 /*   By: abiri <kerneloverseer@pm.me>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/04 13:53:02 by abiri             #+#    #+#             */
-/*   Updated: 2019/05/09 16:26:06 by abiri            ###   ########.fr       */
+/*   Updated: 2019/05/09 18:16:55 by abiri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ int	main(int argc, char **argv)
 		ft_printf("Fract'ol :\nUsage: ./fractol <fractal id>\n");
 		ft_printf("please choose a fractal to visualise\n");
 		ft_printf("0 - Mandelbrot\n1 - Julia\n2 - Burningship\n\
-3 - celtic mandelbar\n4 - Burningship 5th\n");
+3 - celtic mandelbar\n4 - Burningship 5th\n5 - Celtic Mandelbrot\n\
+6 - Buffallo\n");
 		return (1);
 	}
 	fractid = ft_atoi(argv[1]);
-	if (fractid < 0 || fractid > 4)
+	if (fractid < 0 || fractid > 6)
 	{
 		ft_printf("Fract'ol : fractal not available\n");
 		return (1);
