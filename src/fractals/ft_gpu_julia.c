@@ -6,7 +6,7 @@
 /*   By: abiri <kerneloverseer@pm.me>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 22:06:17 by abiri             #+#    #+#             */
-/*   Updated: 2019/05/09 17:04:27 by abiri            ###   ########.fr       */
+/*   Updated: 2019/05/09 17:25:31 by abiri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ static void	ft_loadargs(t_env *env, t_opencl *cl, cl_mem device_result)
 			&(env->image->width));
 	clSetKernelArg(cl->kernel, 6, sizeof(env->image->height),
 			&(env->image->height));
-	clSetKernelArg(cl->kernel, 7, sizeof(env->mouseX), &(env->mouseX));
-	clSetKernelArg(cl->kernel, 8, sizeof(env->mouseY), &(env->mouseY));
+	clSetKernelArg(cl->kernel, 7, sizeof(env->mousex), &(env->mousex));
+	clSetKernelArg(cl->kernel, 8, sizeof(env->mousey), &(env->mousey));
 	clSetKernelArg(cl->kernel, 9, sizeof(cl_mem), &(device_result));
 }
 

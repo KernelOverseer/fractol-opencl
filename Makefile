@@ -6,7 +6,7 @@
 #    By: abiri <kerneloverseer@protonmail>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/15 20:38:11 by abiri             #+#    #+#              #
-#    Updated: 2019/05/09 17:10:33 by abiri            ###   ########.fr        #
+#    Updated: 2019/05/09 17:28:19 by abiri            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,7 @@ clean:
 	@echo "\n$(_lCYAN)Makefile :$(_END) will delete $(_RED)$(SRC:.c=.o)$(_END)"
 	@echo "starting in $(DELAY) sec, $(_RED)press Ctrl-c to abort$(_END)"
 	@sleep $(DELAY)
+	@make -C ./libs/libft clean
 	@rm -f $(SRC:.c=.o)
 fclean: clean
 	@echo "\n$(_lCYAN)Makefile :$(_END) will delete $(_RED)$(NAME)$(_END)"

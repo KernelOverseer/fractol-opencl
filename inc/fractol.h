@@ -6,7 +6,7 @@
 /*   By: abiri <kerneloverseer@pm.me>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/05 10:46:47 by abiri             #+#    #+#             */
-/*   Updated: 2019/05/09 17:20:16 by abiri            ###   ########.fr       */
+/*   Updated: 2019/05/09 17:24:28 by abiri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ t_image					*ft_new_image(void *mlx, unsigned int width,
 		unsigned int height);
 int						idx(int row, int col, int dim);
 int						rgb(unsigned char r, unsigned char g, unsigned char b);
-double					ft_map(double n, double max, double min, double max);
+double					ft_map(double n, double max, double mi, double ma);
 
 /*
 **	Color loading functions

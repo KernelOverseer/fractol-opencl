@@ -6,7 +6,7 @@
 /*   By: abiri <kerneloverseer@pm.me>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 18:09:58 by abiri             #+#    #+#             */
-/*   Updated: 2019/05/09 17:11:55 by abiri            ###   ########.fr       */
+/*   Updated: 2019/05/09 17:24:49 by abiri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int				mouse_move(int x, int y, void *param)
 	env = (t_env *)param;
 	if (!env->fixed)
 	{
-		env->mouseX = x;
-		env->mouseY = y;
+		env->mousex = x;
+		env->mousey = y;
 		env->func(env);
 	}
 	return (0);
