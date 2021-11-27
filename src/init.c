@@ -6,7 +6,7 @@
 /*   By: abiri <kerneloverseer@pm.me>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 17:23:39 by abiri             #+#    #+#             */
-/*   Updated: 2019/05/09 18:45:00 by abiri            ###   ########.fr       */
+/*   Updated: 2021/11/27 16:01:07 by abiri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ t_env		*ft_init_env(void *mlx, unsigned int width, unsigned int height)
 	if (!(env = malloc(sizeof(t_env))))
 		return (NULL);
 	env->image = ft_new_image(mlx, width, height);
-	env->a_min = -2;
-	env->a_max = 2;
-	env->b_min = -2;
-	env->b_max = 2;
+	env->a_min = -(2.0 * width / 1000.0);
+	env->a_max = 2.0 * width / 1000.0;
+	env->b_min = -(2.0 * height / 1000.0);
+	env->b_max = 2.0 * height / 1000.0;
 	env->max_iter = 1000;
 	env->fixed = 0;
 	env->colorindex = 0;

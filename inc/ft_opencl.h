@@ -6,12 +6,13 @@
 /*   By: abiri <kerneloverseer@pm.me>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/06 11:48:56 by abiri             #+#    #+#             */
-/*   Updated: 2019/05/09 17:20:55 by abiri            ###   ########.fr       */
+/*   Updated: 2021/11/27 15:57:32 by abiri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_OPENCL_H
 # define FT_OPENCL_H
+# define CL_SILENCE_DEPRECATION
 # include <OpenCL/cl.h>
 
 /*
